@@ -1,0 +1,101 @@
+.diagonal-gradient{
+  background: radial-gradient( rgb(249, 247, 192), rgb(174, 96, 13));
+}
+
+.img-exp{
+    height: 50%;
+    width: auto;
+    margin-bottom: 5%;
+  }
+  
+  #container-grid{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, 450px);
+    justify-content: space-evenly;
+    column-gap: 3vw;
+    row-gap: 10vh;
+    margin-bottom: 10vh;
+  }
+  
+.container-exp{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .p-texto-exp{
+    background-color: bisque;
+    opacity: 70%;
+    filter: brightness(0.8); 
+    font-size: 1.25em;
+    margin-left: 10%;
+    margin-bottom: 15%;
+
+    text-align: justify;
+    width: 80%;
+    padding: 2%;
+  }
+
+ 
+/* ANIMACION */
+#animacion{
+    background-image: url('../img/exp1-day-of-the-dead-1868836_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50vh;
+    width: 80vw;
+    position: relative;
+    left: 3vw;
+    top: 3vh;
+    animation-name: experiencias;
+    animation-duration: 12s;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+  }
+  
+  @keyframes experiencias {
+    0% {background-image: url('../img/exp1-day-of-the-dead-1868836_1280.jpg');}
+    15% {background-image: url('../img/exp2-mountaineers-5649828_1280.jpg');}
+    30% {background-image: url('../img/exp3-cruise-1236642_1280.jpg');}
+    45% {background-image: url('../img/exp4-whale-1181395_1280.jpg');}
+    60% {background-image: url('../img/exp5-2560_11969_par2.jpg');}
+    75% {background-image: url('../img/exp6-mexico-2086549_1280.jpg');}
+    80% {background-image: url('../img/exp6-tango-190026_1280.jpg');}
+    90% {background-image: url('../img/exp9-portrait-4314165_1280.jpg');}
+    100% {background-image: url('../img/exp1-day-of-the-dead-1868836_1280.jpg');}
+  }
+  
+  
+
+
+
+/* Contenedor del fondo de pantalla */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/1exp-mushrooms-2786789_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    transform: scale(1);
+    transition: transform 3s ease, filter 3s ease;
+    z-index: -1;
+}
+
+body.loaded .background-image {
+    transform: scale(1.1);
+    filter: brightness(0.3);
+}
+
+/* Contenido de la página */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+}
+

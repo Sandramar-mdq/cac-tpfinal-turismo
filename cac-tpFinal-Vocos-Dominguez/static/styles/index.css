@@ -1,0 +1,297 @@
+/* Selector universal, eliminan margenes */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --color-fondo-header: black;
+  --color-fondo-footer: black;
+  --color-text-header: whitesmoke;
+  --color-subtitulos: rgb(12, 12, 214);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size:medium;
+}
+
+.body-index{
+  background-color: #000;
+}
+
+/* ANIMACION BACKGROUND */
+.background-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-slideshow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideshow 30s infinite;
+  filter: sepia(50%) brightness(0.5);
+}
+
+@keyframes slideshow {
+  0% {background-image: url('../img/dest1-bagan-1577961_1280.jpg');}
+  20% {background-image: url('../img/dest2-mexico-3774303_1280.jpg');}
+  25% {background-image: url('../img/dest3-greece-1594689_1280.jpg');}
+  45% {background-image: url('../img/dest4-angkor-thom-8096092_1280.jpg');}
+  50% {background-image: url('../img/dest5-carlospaz.jpg');}
+  70% {background-image: url('../img/dest6-iguassus-mouth-511500_1280.jpg');}
+  75% {background-image: url('../img/dest7-ciudad_mdp.jpg');}
+  95% {background-image: url('../img/dest8-byodo-in-165059_1280.jpg');}
+  100% {background-image: url('../img/dest1-bagan-1577961_1280.jpg');}
+}
+
+.p-index{
+  background-color: bisque;
+  opacity: 70%;
+  filter: brightness(0.7);
+  padding: 10px;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.en-linea{
+  display: flex;
+}
+
+
+.titulo{
+  font-size: 5em;
+  text-align: center;
+  background-image: url('../img/rosa.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: transparent;
+  background-clip: text;
+  margin: 20px;
+}
+
+.subtitulo{
+  font-size: 3em;
+  text-align: center;
+  color: var(--color-subtitulos) ;
+  padding: 20px;
+  text-shadow: rgb(236, 212, 115) 1px 0 15px;
+}
+
+.p-texto{
+  font-size: 1.25em;
+  margin: 20px 20px 0px 20px ;
+  text-align: justify;
+}
+
+.c-img{
+  object-fit: cover;
+  background-size: cover;
+  border-radius:5px;
+}
+
+.c-container{
+  min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  gap: 1.5rem;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+
+.c-div{
+  background-color: rgb(178, 175, 179);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgb(156, 152, 152);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  width: 15rem;
+  padding: 0 0 0.5em 0;
+}
+
+.c-title{
+  color: black;
+  font-size: x-large;
+  text-align: center;
+  font-weight: bold;
+}
+
+.c-body{
+  color: black;
+  background-color: rgb(178, 175, 179);
+  text-align: justify;
+  margin: 0.5em;
+}
+
+
+.div-btn{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.d-btn{
+  padding: 10px;
+  border: none;
+  background-color: rgb(38, 179, 235);
+  color: rgb(219, 214, 214);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+  
+.d-btn:hover{
+  background-color: rgb(172, 239, 206);
+  color: rgb(6, 126, 147);
+  box-shadow: 2px 2px 5px;
+  transform: translate(2px);
+  transform: scale(1.25, 1.25);
+  transition:all .5s ease-in-out;
+}
+
+
+/* RESPONSIVE */
+@media only screen and (min-width: 481px) and (max-width: 992px) {
+  .img-logo{
+    width: 90px;
+    margin-right: 100px;
+  }
+
+    .subtitulo{
+      font-size: 2em;
+      text-align: center;
+      color: var(--color-subtitulos) ;
+      padding: 10px;
+    }
+
+    .c-title{
+      color: black;
+      font-size: medium;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .div-btn{
+      display: flex;
+      flex-direction: row;
+      margin-top: 5px;
+    }
+    
+    .d-btn{
+      padding: 5px;
+      border: none;
+      background-color: rgb(38, 179, 235);
+      color: rgb(219, 214, 214);
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+      
+    .p-texto{
+      font-size: 1em;
+      margin: 10px 10px 0px 10px ;
+      text-align: justify;
+    }
+
+    .titulo{
+      font-size: 3em;
+      text-align: center;
+      background-image: url('../img/rosa.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      color: transparent;
+      background-clip: text;
+      margin: 10px;
+    }
+
+    #container-grid{
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(4, auto);
+      justify-content: space-evenly;
+      column-gap: 3vw;
+      row-gap: 10vh;
+      margin-bottom: 10vh;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .img-logo{
+      width: 60px;
+      margin-right: 3em;
+    }
+
+    .subtitulo{
+      font-size: 14px;
+      text-align: left;
+      color: var(--color-subtitulos) ;
+      padding: 5px;
+      background-color: rgb(123, 233, 245);
+
+    }
+    
+    #container-grid{
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(8, auto);
+      justify-content: space-evenly;
+      column-gap: 3vw;
+      row-gap: 5vh;
+      margin-bottom: 10vh;
+    }
+    
+
+.textfoot{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* listas pata pagina LINS.HTML*/
+li {
+  list-style-position: outside;
+  margin-left: 50px;
+}
+
+
+.p-titulo-link{
+  font-size: 1.25em;
+  font-weight: bolder;
+  margin: 10px 10px 0px 10px ;
+  text-align: justify;
+}
+
+.p-texto-link{
+  font-size: 1em;
+    margin: 10px 10px 0px 10px ;
+    text-align: justify;
+}
+
+.link-link{
+  font-size: 1.1em;
+  padding: 10px;
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: bold;
+  margin-left: 5vw;
+  margin-top: 1em;
+}

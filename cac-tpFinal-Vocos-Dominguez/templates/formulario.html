@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Empresa dedida a realizar viajes por America del Sur"> 
+        <meta name="keywords" content="turismo, quince años, egresados, luna de miel">
+        <link rel="stylesheet" href="../static/styles/head_foot.css">
+        <link rel="stylesheet" href="../static/styles/form.css">
+        <title>Formulario - Viajes</title>
+    
+        <link rel="shortcut icon" href="../static/img/travel-1883060_1280.ico" type="image/x-icon">
+    </head>
+
+<body>
+    <a id="ancla-1"></a>
+    
+    <header>
+        <div>
+          <img class="img-logo" src="../static/img/travel-1883060_1280.png" alt="">
+        </div>
+        
+        <nav>
+            <a class="link" href="../index.html"> Inicio </a>
+            <a class="link" href="../templates/galeria.html"> Galeria </a>
+            <a class="link link:hover" href="../templates/sucursales.html"> Sucursales </a>
+            <a class="link" href="../templates/experien.html"> Experiencias </a>
+            <a class="link link:hover" href="../templates/links.html" target="_blank"> Links útiles </a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 class="subtitulo">Formulario</h1>
+        <!-- * Crear campos para nombre, apellido, fecha de nacimiento, edad y email.  -->
+        <section>
+                <!-- <form action="mailto:sandramar48@hotmail.com?subject=consulta por viaje" method="post" enctype="text/plain" onsubmit="return validarForm()"> -->
+                <form action="https://formspree.io/f/mkndqkvv" method="POST">
+
+                    <fieldset>
+                        <legend class="subtitulo-form">Datos personales: </legend>
+                        <div>
+                            <div>
+                                <label class="p-texto-form" for="nombre"> Nombre: </label>
+                                <input type="text" name="nombre" id="nombre" maxlength="10" required placeholder="sólo el primer nombre">
+                            </div><br>
+                
+                            <div>
+                                <label class="p-texto-form" for="apellido"> Apellido: </label>
+                                <input type="text" name="apellido" id="apellido">
+                            </div><br>
+                
+                                    
+                            <div>
+                                <label class="p-texto-form" for="telefono">Telefono: </label>
+                                <input type="tel" name="telefono" id="telefono">
+                            </div><br>
+                
+                            <div>
+                                <label class="p-texto-form" for="email">Correo electrónico: </label>
+                                <input type="email" name="email" id="email">
+                            </div><br>  
+        
+                            <div>
+                                <label class="p-texto-form" for="archivodni">Adjuntar Foto DNI (frente): </label>
+                                <input type="file" name="archivodni" id="archivodni">
+                            </div><br>
+                        </div>
+
+                    </fieldset>
+
+                    <br><br>
+
+                    <fieldset >
+                        <legend class="subtitulo-form">Diseña tu viaje</legend>
+                        <div class="c-container-form">
+                            <div>
+                                <h3>Busca tu destino</h3><br>
+                                <label class="p-texto-form" for="destino"> Destinos: </label>
+                                <select name="destino" id="destino">
+                                    <option value="M">Mar del Plata</option>
+                                    <option value="C">Córdoba</option>
+                                    <option value="S">Sudeste Asiático</option>
+                                    <option value="E">Europa</option>
+                                    <option value="A">Asia</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <h3>Partida y regreso</h3><br>
+                                <label class="p-texto-form" for="partida"> Fecha de Partida: </label>
+                                <input type="date" name="partida" id="partida">
+                                <br><br>
+                            
+                                <label class="p-texto-form" for="vuelta"> Fecha de Regreso: </label>
+                                <input type="date" name="vuelta" id="vuelta">
+                            </div><br>
+
+                            <div>
+                                <h3>Tipo de Alojamiento</h3> <br>                   
+                                <!-- <label class="p-texto-form" for="tipoalojamiento"></label><br> -->
+                                <!-- revisar label for, name y id -->
+                                
+                                <input type="radio" name="area" id="hostel">
+                                <label class="p-texto-form" for="hostel">Hostel</label><br>
+                
+                                <input type="radio" name="area" id="2star">
+                                <label class="p-texto-form" for="2star">Hotel 2 estrelleas </label><br>
+                
+                                <input type="radio" name="area" id="3star">
+                                <label class="p-texto-form" for="3star">Hotel 3 Estrellas</label><br>
+
+                                <input type="radio" name="area" id="4star">
+                                <label class="p-texto-form" for="4star">Hotel 4 Estrellas</label><br>
+
+                                <input type="radio" name="area" id="5star">
+                                <label class="p-texto-form" for="5star">Hotel 5 Estrellas</label><br>
+                            </div> <br>
+            
+                            <div>
+                                <h3>Regimen</h3><br>
+                                <input type="checkbox" name="regimen" id="desayuno">
+                                <label class="p-texto-form" for="desayuno">Desayuno</label><br>
+                
+                                <input type="checkbox" name="regimen" id="almuerzo">
+                                <label class="p-texto-form" for="almuerzo">Almuerzo</label><br>
+                
+                                <input type="checkbox" name="regimen" id="cena">
+                                <label class="p-texto-form" for="cena">Cena</label><br>
+                            </div> <br>
+                        </div><br>
+                    </fieldset>
+                    <br>
+                
+                    <fieldset>
+                        <legend class="subtitulo-form"> Mandanos tu consulta de viaje: </legend>
+                        <div>
+                        
+                            <label for="comentario"></label>
+                            <textarea name="comentario" id="comentario" cols="100" rows="10"></textarea>
+                        </div>
+                    </fieldset>
+                    <br><br>
+    
+                    <!-- NO SE LIMPIA EL FORM AL PRESIONAR LOS BOTONES ENVIAR O BORRAR -->
+                    <div class="div-btn">
+                        <input class="d-btn d-btn:hover" type="submit" onclick='return validarForm();' value="Enviar"> 
+                        <input class="d-btn d-btn:hover" type="reset" value="Borrar">
+                    </div>
+                 </form>
+            
+                <div id='error'></div>
+        </section>
+   
+
+        <footer class="en-linea">
+            <div>
+                <a href=""><img class="icon" src="../static/img/facebook.png" alt="facebook"></a>
+                <a href=""><img class="icon" src="../static/img/instagram.png" alt="instagram"></a>
+                <a href=""><img class="icon" src="../static/img/twitter.png" alt="tweeter"></a>
+                <a href="https://wa.me/+542231234567"><img class="icon" src="../static/img/whatsappT.png" alt="whatsapp"></a>
+            </div>
+
+            <div>
+                <p class="textfoot">Codo a Codo - Ciclo 2024 - <a class="arriba" href="#ancla-1">Volver al comienzo</a></p>
+            </div>
+        </footer>
+        
+        <script src="../static/scripts/form.js"></script>    
+    
+    </main>
+
+</body>
+</html>
