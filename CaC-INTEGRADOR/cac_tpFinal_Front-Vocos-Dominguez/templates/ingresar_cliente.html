@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empresa dedida a realizar viajes por America del Sur"> 
+    <meta name="keywords" content="turismo, quince años, egresados, luna de miel">
+    <link rel="stylesheet" type="text/css" href="../static/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/tabla_cliente.css">
+    <link rel="stylesheet" href="../static/styles/head_foot.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/sucursales.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/reg_clientes.css">
+    <title>Clientes</title>
+
+    <link rel="shortcut icon" href="../static/img/travel-1883060_1280.ico" type="image/x-icon">
+</head>
+
+<body>
+<a id="ancla-1"></a>
+
+<header>
+    <div>
+      <img class="img-logo" src="../static/img/travel-1883060_1280.png" alt="">
+    </div>
+
+      <nav>
+          <a class="link link:hover" href="../index.html"> Inicio </a>
+          <a class="link link:hover" href="../templates/galeria.html"> Galeria </a>
+          <a class="link link:hover" href="../templates/experien.html"> Experiencias </a>
+          <a class="link link:hover" href="../templates/formulario.html">Formulario</a>
+          <a class="link link:hover" href="../templates/links.html"> Links útiles </a>
+      </nav>
+</header>
+
+<body>
+
+    <section>
+        <h1>Registro de clientes</h1>
+        <br>
+        <a class="d-btn d-btn:hover" href="./tabla_clientes.html">Tabla</a>
+        <br><br>
+    </section>
+
+    <main>
+
+        <section>
+            <div class="container-form">
+
+                <form action="">
+                    <div class="entrada">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="telefono">Telefono:</label>
+                        <input type="text" name="telefono" id="telefono">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="mail">Mail:</label>
+                        <input type="text" name="mail" id="mail">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="foto_dni">DNI:</label>
+                        <input type="text" name="foto_dni" id="foto_dni">
+                    </div>
+
+                    <div class="entrada"><br>
+                        <button class="d-btn d-btn:hover" type="button" onclick="guardar()">Guardar</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="en-linea">
+        <div>
+            <a href=""><img class="icon" src="../static/img/facebook.png" alt="facebook"></a>
+            <a href=""><img class="icon" src="../static/img/instagram.png" alt="instagram"></a>
+            <a href=""><img class="icon" src="../static/img/twitter.png" alt="tweeter"></a>
+            <a href="https://wa.me/+542231234567"><img class="icon" src="../static/img/whatsappT.png" alt="whatsapp"></a>
+        </div>
+
+        <div>
+            <p class="textfoot">Codo a Codo - Ciclo 2024 - <a class="arriba" href="#ancla-1">Volver al comienzo</a></p>
+        </div>
+
+    </footer>
+
+
+    <script src="../static/scripts/ingresar_cliente.js"></script>
+
+</body>
+
+</html>

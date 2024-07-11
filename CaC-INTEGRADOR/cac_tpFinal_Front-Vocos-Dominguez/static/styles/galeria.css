@@ -1,0 +1,48 @@
+.subtitulo{
+    font-size: 3em;
+    text-align: center;
+    color: var(--color-subtitulos) ;
+    padding: 20px;
+    text-shadow: rgb(236, 212, 115) 1px 0 15px;
+  }
+
+  .c-div-gal{
+    background-color: rgb(178, 175, 179);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(164, 216, 246);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    width: 15rem;
+    padding: 0 0 0.5em 0;
+  }
+
+/* Contenedor del fondo de pantalla */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/dest6-iguassus-mouth-511500_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    transform: scale(1);
+    transition: transform 3s ease, filter 3s ease;
+    z-index: -1;
+}
+
+body.loaded .background-image {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+/* Contenido de la página */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+}

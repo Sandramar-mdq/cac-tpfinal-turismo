@@ -1,0 +1,119 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --color-fondo-header: black;
+  --color-text-header: whitesmoke;
+   --color-subtitulos: rgb(11, 11, 124);
+  font-size: medium;
+}
+
+header{
+  background-color: var(--color-fondo-header);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.img-logo{
+    width: 80px;
+    margin-right: 20em;
+  }
+
+.link{ 
+  color: var(--color-text-header);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.25em;
+  text-decoration: none;
+  margin: 0.5em;
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+
+.link:hover{
+  color: rgb(218, 94, 32);
+  padding: 5px;
+  font-size: 1.5em;
+  text-transform:uppercase;
+  animation:blur .50s ease-out infinite;
+  text-shadow:0px 0px 5px #f5a081,
+      0px 0px 7px #f2aef7;
+  transition:0.5s ;
+}
+
+.arriba{
+  font-size: 0.8em;
+  font-weight: bold;
+  color: orange;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+
+footer{
+  background-color: black;
+  padding: 20px;
+}
+
+.icon{
+  width: 50px;
+  margin-right: 2em;
+}
+
+.en-linea{
+  display: flex;
+  justify-content:space-around;
+  vertical-align: middle;
+}
+
+.textfoot{
+  font-size: 2em;
+  font-weight: bold;
+  color: whitesmoke;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 992px) {
+  .img-logo{
+    width: 70px;
+    margin-right: 100px;
+  }
+
+  header{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .textfoot{
+    font-size: 1em;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .icon{
+    width: 40px;
+    margin-right: 1em;
+  }
+  
+
+}
+
+  @media only screen and (max-width: 480px) {
+    .img-logo{
+      width: 50px;
+      margin-right: 3em;
+    }
+
+    
+  }

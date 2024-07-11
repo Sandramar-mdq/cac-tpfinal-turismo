@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --color-fondo-header: black;
+  --color-text-header: whitesmoke;
+   --color-subtitulos: rgb(11, 11, 124);
+  font-size: medium;
+}
+
+header{
+  background-color: var(--color-fondo-header);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.img-logo{
+    width: 80px;
+    margin-right: 20em;
+  }
+
+footer{
+  background-color: black;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Empresa dedida a realizar viajes por America del Sur"> 
+        <meta name="keywords" content="turismo, quince años, egresados, luna de miel">
+        <link rel="stylesheet" type="text/css" href="../static/styles/index.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/tabla_cliente.css">
+        <link rel="stylesheet" href="../static/styles/head_foot.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/sucursales.css">
+        <title>Sucursales - Viajes</title>
+    
+        <link rel="shortcut icon" href="../static/img/travel-1883060_1280.ico" type="image/x-icon">
+    </head>
+
+<body>
+    <a id="ancla-1"></a>
+
+    <header>
+        <div>
+          <img class="img-logo" src="../static/img/travel-1883060_1280.png" alt="">
+        </div>
+
+          <nav>
+              <a class="link link:hover" href="../index.html"> Inicio </a>
+              <a class="link link:hover" href="../templates/galeria.html"> Galeria </a>
+              <a class="link link:hover" href="../templates/experien.html"> Experiencias </a>
+              <a class="link link:hover" href="../templates/formulario.html">Formulario</a>
+              <a class="link link:hover" href="../templates/links.html"> Links útiles </a>
+          </nav>
+    </header>
+
+
+    <main>
+
+        <section class="container">
+            <div id="app" >
+
+                <!-- Botón Nuevo -->
+                <br>
+                <a class="d-btn d-btn:hover" href="./ingresar_cliente.html" >Nuevo cliente</a>
+                <br><br>
+
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <p>Cargando .....</p>
+
+                    </section>
+
+                    <section v-else>
+                        
+                        <div >
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Telefono</th>
+                                        <th>Mail</th>
+                                        <th>Imagen DNI</th>
+                                        <th>Acciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="cliente in clientes">
+                                        <td >{{cliente.id}}</td>
+                                        <td>{{cliente.nombre}}</td>
+                                        <td>{{cliente.apellido}}</td>
+                                        <td>{{cliente.telefono}}</td>
+                                        <td>{{cliente.mail}}</td>
+                                        <td>
+                                            <img class="img-custom" :src="cliente.foto_dni" alt="">
+                                        </td>
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(cliente.id)">Eliminar</button>
+                                        </td>
+                                        <td>
+                                            <a class="boton" :href="'editar_cliente.html?id='+ cliente.id+'&nombre=' +cliente.nombre+ '&apellido='+cliente.apellido+'&telefono='+cliente.telefono +'&mail='+cliente.mail +  '&foto_dni='+cliente.foto_dni">Editar</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="en-linea">
+        <div>
+            <a href=""><img class="icon" src="../static/img/facebook.png" alt="facebook"></a>
+            <a href=""><img class="icon" src="../static/img/instagram.png" alt="instagram"></a>
+            <a href=""><img class="icon" src="../static/img/twitter.png" alt="tweeter"></a>
+            <a href="https://wa.me/+542231234567"><img class="icon" src="../static/img/whatsappT.png" alt="whatsapp"></a>
+        </div>
+
+        <div>
+            <p class="textfoot">Codo a Codo - Ciclo 2024 - <a class="arriba" href="#ancla-1">Volver al comienzo</a></p>
+        </div>
+
+    </footer>
+
+   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../static/scripts/tabla_clientes.js"></script>
+
+</body>
+</html>

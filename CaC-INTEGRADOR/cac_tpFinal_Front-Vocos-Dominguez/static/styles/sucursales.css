@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root{
+    --color-fondo-header: black;
+    --color-fondo-footer: black;
+    --color-text-header: whitesmoke;
+    --color-subtitulos: rgb(12, 12, 214);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:medium;
+  }
+
+  h3{
+    font-size: 1.5em;
+    background-color: antiquewhite;
+    padding: 10px;
+    opacity: 0.5;
+    margin-bottom: 5%;
+  }
+    
+  .subtitulo{
+    font-size: 3em;
+    text-align: center;
+    color: var(--color-subtitulos) ;
+    padding: 20px;
+  }
+  
+  .p-texto{
+    font-size: 1.25em;
+    margin: 20px 20px 20px 20px ;
+    text-align: justify;
+  }
+  
+  
+  .c-img{
+    object-fit: cover;
+    background-size: cover;
+    border-radius:5px;
+   
+  }
+  
+  .c-container-map{
+    min-height: 120vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100vw;
+    gap: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+     
+  }
+    
+  .c-div{
+    background-color: rgb(178, 175, 179);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(156, 152, 152);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    width: 15rem;
+    padding: 0 0 0.5em 0;
+  }
+  
+  .c-container-map{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    gap: 2.5rem;
+    /* width: 100%; */
+  }
+  
+  .c-map{
+    display: flex;
+    border: 2px solid rgb(156, 152, 152);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    padding: 0 0 0.3em 0;
+    /* le sume ancho */
+    width: 100%;
+  }
+  
+  .p-texto-map{
+    font-size: 1.5em;
+    margin: 10px 10px 10px 10px ;
+    text-align: justify;
+  }
+  
+  
+
+/* Contenedor del fondo de pantalla */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/viejo-mapa-del-mundo.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    transform: scale(1);
+    transition: transform 3s ease, filter 3s ease;
+    z-index: -1;
+}
+
+body.loaded .background-image {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+    filter: blur(5px);
+}
+
+/* Contenido de la página */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+  
+  /* .map-responsive{
+    overflow: hidden;
+    padding-bottom: 40.20%;
+    position: relative;
+    height: 0;
+  
+  }
+  
+  .map-responsive iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  
+  } */
+  
+ 
+  
+  /* RESPONSIVE */
+  @media only screen and (min-width: 481px) and (max-width: 992px) {
+    .img-logo{
+      width: 90px;
+      margin-right: 100px;
+    }
+  
+      .subtitulo{
+        font-size: 2em;
+        text-align: center;
+        color: var(--color-subtitulos) ;
+        padding: 10px;
+      }
+  
+      .c-title{
+        color: black;
+        font-size: medium;
+        text-align: center;
+        font-weight: bold;
+      }
+  
+      .div-btn{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+      }
+      
+      .d-btn{
+        padding: 5px;
+        border: none;
+        background-color: rgb(38, 179, 235);
+        color: rgb(219, 214, 214);
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-left: 10px;
+        margin-right: 10px;
+       
+      }
+        
+      .p-texto{
+        font-size: 1em;
+        margin: 10px 10px 0px 10px ;
+        text-align: justify;
+      }
+  
+      .titulo{
+        font-size: 3em;
+        text-align: center;
+        background-image: url('../img/rosa.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        color: transparent;
+        background-clip: text;
+        margin: 10px;
+      }
+  }
+  
+  @media only screen and (max-width: 480px) {
+      .img-logo{
+        width: 60px;
+        margin-right: 3em;
+      }
+  
+      .subtitulo{
+        font-size: 14px;
+        text-align: left;
+        color: var(--color-subtitulos) ;
+        padding: 5px;
+        background-color: rgb(123, 233, 245);
+  
+      }
+      
+      
+  
+  .textfoot{
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+   }

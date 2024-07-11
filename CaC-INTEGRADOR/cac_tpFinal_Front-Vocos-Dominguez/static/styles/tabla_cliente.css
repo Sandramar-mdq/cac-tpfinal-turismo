@@ -1,0 +1,46 @@
+/* Selector universal, eliminan margenes */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --color-fondo-header: black;
+  --color-fondo-footer: black;
+  --color-text-header: whitesmoke;
+  --color-subtitulos: rgb(12, 12, 214);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size:medium;
+}
+
+table {
+    width: 80%;
+    border: 2px solid #470404;
+ }
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+ }
+ caption {
+    padding: 0.3em;
+    color: #f9f7f7;
+     background: #dd0404;
+ }
+ th {
+    background: #ecc9c9;
+ }
+
+ .img-custom {
+   position: relative;
+   float: left;
+   width:  100px;
+   height: 100px;
+   background-position: 50% 50%;
+   background-repeat:   no-repeat;
+   background-size: contain;
+ }
